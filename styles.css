@@ -1,3 +1,7 @@
+body {
+    background-color: cadetblue;
+}
+
 p {
     text-align: justify;
     text-indent: 10px;
@@ -26,26 +30,7 @@ a:active {color: aqua;}
 
 a[href*="html"] {color: red;}
 
-div {
-    width: 200px;
-    height: 200px;
-    border: 20px solid green;
-    background-color: thistle;
-    border-radius: 40px;
-    text-align: center;
-    margin: 10px;
-}
 
-div + div{
-    background-color: aquamarine;
-    box-sizing: border-box;
+a[href="grids.html"] {
+    color: chocolate;
 }
-
-div:not(div + div){
-    border-width: 0;
-}
-
-p:not(:first-of-type){
-    color: red;
-}
-
