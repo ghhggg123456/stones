@@ -1,5 +1,29 @@
+
 body {
     background-color: cadetblue;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#page {
+    background: repeating-radial-gradient(circle at center, black 5px, white 10px)
+}
+
+.blocks {
+    display: flex;
+    padding: 40px;
+    margin: 30px;
+    font-size: 30px;
+    color: brown;
+    background-color: aquamarine;
+}
+
+.blocks div:first-child {
+    word-break: break-all;
+}
+
+.blocks div:first-child {
+    overflow-wrap: break-word;
 }
 
 p {
@@ -8,8 +32,57 @@ p {
     text-decoration: line-through;
 }
 
+pre {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p:nth-of-type(1) {
+    letter-spacing: -2px;
+    word-spacing: -10px;
+}
+
+p:nth-of-type(2) {
+    text-transform: capitalize;
+    font-variant: small-caps;
+}
+
+p:nth-of-type(3) {
+    text-align: center;
+    text-align-last: justify;
+}
+
+p:nth-of-type(3)::first-letter {
+    color:darkblue;
+    font-size: 140%;
+}
+
+p:nth-of-type(4) {
+    text-align: justify;
+    white-space: pre;
+    text-overflow: ellipsis;
+}
+
+p:nth-of-type(5) {
+    cursor: grab;
+    user-select: all;
+    hyphens: auto;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color:brown;
+    text-decoration-thickness: 1px;
+}
+
+p:nth-of-type(5)::selection {
+    background-color: none;
+    color: darkred;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color:brown;
+}
+
 td, th, table {
     border: 1px solid black;
+    border-collapse: collapse;
     table-layout: fixed;
 }
 
@@ -23,14 +96,27 @@ ol {
     list-style: georgian;
 }
 
+li::hover::before {
+    content: "!!!";
+}
+
 a:link {text-decoration: none; color: blue;}
 a:visited {text-decoration: none; color: blueviolet;}
 a:hover {text-decoration: overline;}
+a:hover::after {content: '(' attr(href) ')';}
 a:active {color: aqua;}
+
 
 a[href*="html"] {color: red;}
 
 
 a[href="grids.html"] {
     color: chocolate;
+}
+
+textarea {
+	resize: horizontal;
+	width: 200px;
+	height: 200px;
+    background-color: darkblue;
 }
